@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1084501932407",
+    "project_id": "intervaltraining-170910"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084501932407:android:1d8a85b7b825cca8",
+        "android_client_info": {
+          "package_name": "it.emperor.intervaltraining"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084501932407-9bum8ojo7rjalkev4q2c0eiqcak3jfj5.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1084501932407-5dppmvn2fqr1reuo2nqt6jcarh918f4c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "it.emperor.intervaltraining",
+            "certificate_hash": "d45ce59b79ab459ff7d7e4fd5ed08a615a21c41d"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAPN3tgw0ZFmwKY5NzJF0lUGnKY25yP8Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

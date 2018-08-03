@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/standard_mini_dimension"
+    android:paddingLeft="@dimen/standard_dimension"
+    android:paddingRight="@dimen/standard_dimension"
+    android:paddingTop="@dimen/standard_sub_dimension"
+    tools:ignore="DisableBaselineAlignment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:gravity="center_vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/order_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/ic_fiber_manual_record_black_18dp" />
+
+        <TextView
+            android:id="@+id/order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/standard_sub_dimension"
+            android:layout_marginStart="@dimen/standard_sub_dimension"
+            android:text=""
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/work_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/ic_fitness_center_black_18dp" />
+
+        <TextView
+            android:id="@+id/work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard_sub_dimension"
+            android:layout_marginStart="@dimen/standard_sub_dimension"
+            android:text="01:30"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/rest_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/ic_accessibility_black_18dp" />
+
+        <TextView
+            android:id="@+id/rest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/standard_sub_dimension"
+            android:layout_marginStart="@dimen/standard_sub_dimension"
+            android:text="01:30"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:gravity="center_vertical|end"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/count_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/ic_repeat_black_18dp" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginLeft="@dimen/standard_sub_dimension"
+            android:layout_marginStart="@dimen/standard_sub_dimension"
+            android:text="10"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

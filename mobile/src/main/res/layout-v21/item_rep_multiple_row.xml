@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/work_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:foreground="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/standard_subline_dimension"
+        android:layout_marginLeft="@dimen/standard_dimension"
+        android:layout_marginRight="@dimen/standard_dimension"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+    <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="@dimen/standard_sub_dimension"
+        android:layout_marginTop="@dimen/standard_element_dimension"
+        android:paddingLeft="@dimen/standard_dimension"
+        android:paddingRight="@dimen/standard_dimension"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:paddingBottom="@dimen/standard_sub_dimension"
+            android:paddingLeft="@dimen/standard_dimension"
+            android:paddingRight="@dimen/standard_dimension"
+            android:paddingTop="@dimen/standard_sub_dimension"
+            android:text="@string/general_edit"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:paddingBottom="@dimen/standard_sub_dimension"
+            android:paddingLeft="@dimen/standard_dimension"
+            android:paddingRight="@dimen/standard_dimension"
+            android:paddingTop="@dimen/standard_sub_dimension"
+            android:text="@string/general_delete"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_gravity="bottom"
+        android:background="@color/opaqueBlackLight" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/standard_subline_dimension"
+        android:layout_gravity="end"
+        android:gravity="center_vertical|end"
+        android:paddingLeft="@dimen/standard_extra_dimension"
+        android:paddingRight="@dimen/standard_extra_dimension">
+
+        <TextView
+            android:id="@+id/work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_fitness_center_black_18dp"
+            android:drawablePadding="@dimen/standard_mini_dimension"
+            android:drawableStart="@drawable/ic_fitness_center_black_18dp"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/textPrimary" />
+
+        <TextView
+            android:id="@+id/rest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard_more_dimension"
+            android:layout_marginRight="@dimen/standard_more_dimension"
+            android:drawableLeft="@drawable/ic_accessibility_black_18dp"
+            android:drawablePadding="@dimen/standard_mini_dimension"
+            android:drawableStart="@drawable/ic_accessibility_black_18dp"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/textPrimary" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_repeat_black_18dp"
+            android:drawablePadding="@dimen/standard_mini_dimension"
+            android:drawableStart="@drawable/ic_repeat_black_18dp"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/textPrimary" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/drag"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|end"
+        android:contentDescription="@null"
+        android:paddingLeft="@dimen/standard_mini_dimension"
+        android:paddingRight="@dimen/standard_mini_dimension"
+        android:tint="@color/colorGrayMedium"
+        app:srcCompat="@drawable/ic_drag_handle_black_24dp" />
+</FrameLayout>

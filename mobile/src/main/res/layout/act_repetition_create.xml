@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    tools:context="it.emperor.intervaltraining.ui.training.Act_RepetitionCreate">
+
+    <View
+        android:id="@+id/reveal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/standard_mini_dimension"
+        android:fitsSystemWindows="true"
+        tools:ignore="UnusedAttribute" />
+
+    <View
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="@color/opaqueBlackLight"
+        android:elevation="@dimen/standard_mini_dimension"
+        android:fitsSystemWindows="true"
+        tools:ignore="UnusedAttribute" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:elevation="@dimen/standard_mini_dimension"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        tools:ignore="UnusedAttribute" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/work_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_subline_dimension"
+            android:background="#FFF"
+            android:elevation="@dimen/standard_nano_dimension"
+            tools:ignore="UnusedAttribute">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/standard_mini_dimension"
+                android:paddingLeft="@dimen/standard_dimension"
+                android:paddingRight="@dimen/standard_dimension"
+                android:paddingTop="@dimen/standard_mini_dimension"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/ic_fitness_center_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_sub_dimension"
+                    android:layout_marginRight="@dimen/standard_sub_dimension"
+                    android:text="@string/training_work"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginLeft="@dimen/standard_dimension"
+                android:layout_marginRight="@dimen/standard_dimension">
+
+                <TextView
+                    android:id="@+id/work_minute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/training_default_minute"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_mini_dimension"
+                    android:layout_marginRight="@dimen/standard_mini_dimension"
+                    android:text="@string/training_divider"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/work_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/training_default_second"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_gravity="bottom"
+                android:background="@color/opaqueBlackLight" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/work_picker_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standard_mini_dimension"
+            android:background="@color/colorGrayLighter"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/work_minute_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-20dp"
+                android:layout_marginTop="-20dp"
+                app:np_dividerColor="@color/colorPrimary"
+                app:np_height="130dp"
+                app:np_max="59"
+                app:np_min="0"
+                app:np_textColor="#212121"
+                app:np_textSize="25dp"
+                app:np_width="46dp"
+                app:np_wrapSelectorWheel="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/standard_mini_dimension"
+                android:layout_marginRight="@dimen/standard_mini_dimension"
+                android:text="@string/training_divider"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/black" />
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/work_second_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-20dp"
+                android:layout_marginTop="-20dp"
+                app:np_dividerColor="@color/colorPrimary"
+                app:np_height="130dp"
+                app:np_max="59"
+                app:np_min="0"
+                app:np_textColor="#212121"
+                app:np_textSize="25dp"
+                app:np_width="46dp"
+                app:np_wrapSelectorWheel="false" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/rest_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_subline_dimension"
+            android:background="#FFF"
+            android:elevation="@dimen/standard_nano_dimension"
+            tools:ignore="UnusedAttribute">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/standard_mini_dimension"
+                android:paddingLeft="@dimen/standard_dimension"
+                android:paddingRight="@dimen/standard_dimension"
+                android:paddingTop="@dimen/standard_mini_dimension"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/ic_accessibility_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_sub_dimension"
+                    android:layout_marginRight="@dimen/standard_sub_dimension"
+                    android:text="@string/training_rest"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginLeft="@dimen/standard_dimension"
+                android:layout_marginRight="@dimen/standard_dimension">
+
+                <TextView
+                    android:id="@+id/rest_minute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/training_default_minute"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_mini_dimension"
+                    android:layout_marginRight="@dimen/standard_mini_dimension"
+                    android:text="@string/training_divider"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/rest_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/training_default_second"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_gravity="bottom"
+                android:background="@color/opaqueBlackLight" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/rest_picker_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standard_mini_dimension"
+            android:background="@color/colorGrayLighter"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/rest_minute_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-20dp"
+                android:layout_marginTop="-20dp"
+                app:np_dividerColor="@color/colorPrimary"
+                app:np_height="130dp"
+                app:np_max="59"
+                app:np_min="0"
+                app:np_textColor="#212121"
+                app:np_textSize="25dp"
+                app:np_width="46dp"
+                app:np_wrapSelectorWheel="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/standard_mini_dimension"
+                android:layout_marginRight="@dimen/standard_mini_dimension"
+                android:text="@string/training_divider"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/black" />
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/rest_second_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-20dp"
+                android:layout_marginTop="-20dp"
+                app:np_dividerColor="@color/colorPrimary"
+                app:np_height="130dp"
+                app:np_max="59"
+                app:np_min="0"
+                app:np_textColor="#212121"
+                app:np_textSize="25dp"
+                app:np_width="46dp"
+                app:np_wrapSelectorWheel="false" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/count_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_subline_dimension"
+            android:background="#FFF"
+            android:elevation="@dimen/standard_nano_dimension"
+            tools:ignore="UnusedAttribute">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/standard_mini_dimension"
+                android:paddingLeft="@dimen/standard_dimension"
+                android:paddingRight="@dimen/standard_dimension"
+                android:paddingTop="@dimen/standard_mini_dimension"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/ic_repeat_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_sub_dimension"
+                    android:layout_marginRight="@dimen/standard_sub_dimension"
+                    android:text="@string/training_count"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginLeft="@dimen/standard_dimension"
+                android:layout_marginRight="@dimen/standard_dimension">
+
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/training_default_count"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_gravity="bottom"
+                android:background="@color/opaqueBlackLight" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/count_picker_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standard_mini_dimension"
+            android:background="@color/colorGrayLighter"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/count_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-20dp"
+                android:layout_marginTop="-20dp"
+                app:np_dividerColor="@color/colorPrimary"
+                app:np_height="130dp"
+                app:np_max="100"
+                app:np_min="0"
+                app:np_textColor="#212121"
+                app:np_textSize="25dp"
+                app:np_width="46dp"
+                app:np_wrapSelectorWheel="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="@string/general_conferma" />
+</android.support.design.widget.CoordinatorLayout>

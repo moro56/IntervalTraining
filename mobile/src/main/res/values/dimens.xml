@@ -1,0 +1,26 @@
+<resources>
+    <dimen name="standard_line_dimension">72dp</dimen>
+    <dimen name="standard_subline_dimension">56dp</dimen>
+    <dimen name="standard_toolbar_dimension">56dp</dimen>
+    <dimen name="standard_element_dimension">48dp</dimen>
+    <dimen name="standard_extra_bis_dimension">38dp</dimen>
+    <dimen name="standard_extra_dimension">32dp</dimen>
+    <dimen name="standard_medium_dimension">24dp</dimen>
+    <dimen name="standard_more_dimension">20dp</dimen>
+    <dimen name="standard_less_more_dimension">18dp</dimen>
+    <dimen name="standard_dimension">16dp</dimen>
+    <dimen name="standard_less_dimension">14dp</dimen>
+    <dimen name="standard_tra_dimension">12dp</dimen>
+    <dimen name="standard_sub_more_dimension">10dp</dimen>
+    <dimen name="standard_sub_dimension">8dp</dimen>
+    <dimen name="standard_six_dimension">6dp</dimen>
+    <dimen name="standard_mini_dimension">4dp</dimen>
+    <dimen name="standard_three_dimension">3dp</dimen>
+    <dimen name="standard_micro_dimension">2dp</dimen>
+    <dimen name="standard_nano_dimension">1dp</dimen>
+    <dimen name="standard_pico_dimension">0.5dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="downwards_drop_shadow_height">16dp</dimen>
+</resources>

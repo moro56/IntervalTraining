@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<it.emperor.intervaltraining.ui.views.MainTrainingView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_marginTop="@dimen/standard_sub_dimension"
+        android:id="@+id/prepare_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/standard_subline_dimension"
+        android:background="@android:color/white"
+        android:foreground="?attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginLeft="@dimen/standard_dimension"
+            android:layout_marginRight="@dimen/standard_dimension">
+
+            <TextView
+                android:id="@+id/prepare_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/training_default_minute"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_mini_dimension"
+                android:layout_marginRight="@dimen/standard_mini_dimension"
+                android:text="@string/training_divider"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/prepare_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/training_default_second"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_gravity="bottom"
+            android:background="@color/opaqueBlackLight" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/standard_mini_dimension"
+            android:paddingLeft="@dimen/standard_dimension"
+            android:paddingRight="@dimen/standard_dimension"
+            android:paddingTop="@dimen/standard_mini_dimension"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/ic_directions_walk_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_sub_dimension"
+                android:layout_marginRight="@dimen/standard_sub_dimension"
+                android:text="@string/training_prepare"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/prepare_picker_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/standard_mini_dimension"
+        android:background="@color/colorGrayLighter"
+        android:gravity="center_horizontal"
+        android:visibility="gone">
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/prepare_minute_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-20dp"
+            android:layout_marginTop="-20dp"
+            app:np_dividerColor="@color/colorPrimary"
+            app:np_height="130dp"
+            app:np_max="59"
+            app:np_min="0"
+            app:np_textColor="#212121"
+            app:np_textSize="25dp"
+            app:np_width="46dp"
+            app:np_wrapSelectorWheel="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/standard_mini_dimension"
+            android:layout_marginRight="@dimen/standard_mini_dimension"
+            android:text="@string/training_divider"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/black" />
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/prepare_second_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-20dp"
+            android:layout_marginTop="-20dp"
+            app:np_dividerColor="@color/colorPrimary"
+            app:np_height="130dp"
+            app:np_max="59"
+            app:np_min="0"
+            app:np_textColor="#212121"
+            app:np_textSize="25dp"
+            app:np_width="46dp"
+            app:np_wrapSelectorWheel="false" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/cooldown_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/standard_subline_dimension"
+        android:layout_marginTop="@dimen/standard_sub_dimension"
+        android:background="@android:color/white"
+        android:foreground="?attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/standard_mini_dimension"
+            android:paddingLeft="@dimen/standard_dimension"
+            android:paddingRight="@dimen/standard_dimension"
+            android:paddingTop="@dimen/standard_mini_dimension"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/ic_restore_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_sub_dimension"
+                android:layout_marginRight="@dimen/standard_sub_dimension"
+                android:text="@string/training_cooldown"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginLeft="@dimen/standard_dimension"
+            android:layout_marginRight="@dimen/standard_dimension">
+
+            <TextView
+                android:id="@+id/cooldown_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/training_default_minute"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_mini_dimension"
+                android:layout_marginRight="@dimen/standard_mini_dimension"
+                android:text="@string/training_divider"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cooldown_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/training_default_second"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_gravity="bottom"
+            android:background="@color/opaqueBlackLight" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/cooldown_picker_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/standard_mini_dimension"
+        android:background="@color/colorGrayLighter"
+        android:gravity="center_horizontal"
+        android:visibility="gone">
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/cooldown_minute_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-20dp"
+            android:layout_marginTop="-20dp"
+            app:np_dividerColor="@color/colorPrimary"
+            app:np_height="130dp"
+            app:np_max="59"
+            app:np_min="0"
+            app:np_textColor="#212121"
+            app:np_textSize="25dp"
+            app:np_width="46dp"
+            app:np_wrapSelectorWheel="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/standard_mini_dimension"
+            android:layout_marginRight="@dimen/standard_mini_dimension"
+            android:text="@string/training_divider"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/black" />
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/cooldown_second_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-20dp"
+            android:layout_marginTop="-20dp"
+            app:np_dividerColor="@color/colorPrimary"
+            app:np_height="130dp"
+            app:np_max="59"
+            app:np_min="0"
+            app:np_textColor="#212121"
+            app:np_textSize="25dp"
+            app:np_width="46dp"
+            app:np_wrapSelectorWheel="false" />
+    </LinearLayout>
+</it.emperor.intervaltraining.ui.views.MainTrainingView>

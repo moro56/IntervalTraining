@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ED3851</color>
+    <color name="colorPrimaryDark">#bd2c40</color>
+    <color name="colorAccent">#00BA9E</color>
+
+    <color name="opaqueBlackDark">#CC000000</color>
+    <color name="opaqueBlack">#80000000</color>
+    <color name="opaqueBlackLight">#20000000</color>
+
+    <color name="colorGrayBorder">#878787</color>
+    <color name="colorGrayBorderSelected">#FFFFFF</color>
+
+    <color name="colorGrayLight">#EEEEEE</color>
+    <color name="colorGrayLighter">#F3F3F3</color>
+    <color name="colorGrayMedium">#CCCCCC</color>
+
+    <color name="colorGrayBg">#545454</color>
+    <color name="colorGrayBgLighter">#989898</color>
+
+    <color name="colorTransparentWhite">#60FFFFFF</color>
+
+    <color name="colorSelectorBlue">#2196F3</color>
+    <!--<color name="colorSelectorBlueDark">#1E88E5</color>-->
+    <color name="colorSelectorCyan">#00BCD4</color>
+    <!--<color name="colorSelectorCyanDark">#00ACC1</color>-->
+    <color name="colorSelectorGray">#9E9E9E</color>
+    <!--<color name="colorSelectorGrayDark">#757575</color>-->
+    <color name="colorSelectorGreen">#4CAF50</color>
+    <!--<color name="colorSelectorGreenDark">#43A047</color>-->
+    <color name="colorSelectorOrange">#FF9800</color>
+    <!--<color name="colorSelectorOrangeDark">#FB8C00</color>-->
+    <color name="colorSelectorBrown">#795548</color>
+    <!--<color name="colorSelectorBrownDark">#6D4C41</color>-->
+    <color name="colorSelectorPurple">#9C27B0</color>
+    <!--<color name="colorSelectorPurpleDark">#8E24AA</color>-->
+    <color name="colorSelectorRed">#ED3851</color>
+    <!--<color name="colorSelectorRedDark">#E54234</color>-->
+
+    <color name="textPrimary">#212121</color>
+    <color name="textTertiary">#BBBBBB</color>
+
+    <color name="icon_bg">#f55043</color>
+</resources>
